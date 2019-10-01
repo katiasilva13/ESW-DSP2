@@ -21,9 +21,9 @@ public class Usar {
 
     //criar um main
     public static void main(String[] args) throws IOException {
-        teste();
-        fileInputStream();
-        fileOutpuStream();
+    teste();    
+    // fileInputStream(); 
+       //   fileOutpuStream();
 
     }
 
@@ -36,9 +36,9 @@ public class Usar {
         login = prop.getProperty("prop.server.login");
         host = prop.getProperty("prop.server.host");
         password = prop.getProperty("prop.server.password");
-        System.out.println("login" + login);
-        System.out.println("host" + host);
-        System.out.println("password" + password);
+        System.out.println("login " + login);
+        System.out.println("host " + host);
+        System.out.println("password " + password);
     }
 
     public static void fileInputStream() throws IOException {
@@ -46,8 +46,8 @@ public class Usar {
         Properties prop = new Properties();
         try {
             prop = getProp();
-            prop.load(new FileInputStream("config.properties"));
-            System.out.println(prop.getProperty("database"));
+            prop.load(new FileInputStream("src\\aula27_08_19\\arquivo.properties"));
+            System.out.println(prop.getProperty("database")); 
             System.out.println(prop.getProperty("dbuser"));
             System.out.println(prop.getProperty("dbpassword"));
         } catch (Exception e) {
